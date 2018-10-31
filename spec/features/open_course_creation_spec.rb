@@ -52,7 +52,7 @@ describe 'open course creation', type: :feature, js: true do
     expect(Course.last.campaigns.count).to eq(1)
     expect(Course.last.home_wiki.language).to eq('ta')
     expect(Course.last.home_wiki.project).to eq('wiktionary')
-    expect(Course.last.start).to eq(Time.parse('2017-01-04 15:35:00').in_time_zone('UTC'))
+    expect(Course.last.start).to eq(Time.zone.parse('2017-01-04 15:35:00').in_time_zone('UTC'))
   end
 
   it 'defaults to English Wikipedia' do
